@@ -125,10 +125,6 @@ class BackgroundProcHandle:
             return
         elif status == "error":
             error = response.get("error", {})
-            error_type = error.get("type", "Unknown")
-            error_message = error.get("message", "No details available")
-            error_traceback = error.get("traceback", "")
-            
             # Format a user-friendly error message
             error_msg = self._format_user_friendly_error(process_name, error)
             
